@@ -7,6 +7,7 @@ Enhance Airflow ETL functionality
       E.g.            
             
             from rp_bigquery_operator import RPBigQueryOperator
+            ...
             t1 = RPBigQueryOperator(
                   task_id='example_task',
                   sql=['/example.sql'],
