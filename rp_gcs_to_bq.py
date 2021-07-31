@@ -314,7 +314,7 @@ class RPGoogleCloudStorageToBigQueryOperator(BaseOperator):
             escaped_table_name = '`{}`'.format(self.destination_project_dataset_table)
 
         if self.max_id_key:
-            cursor.run_query(sql='INSERT INTO ABC.FILE_LOAD_LOG(FILE_CNT) SELECT COUNT(COL_1) FROM '+escaped_table_name"' ; ')
+            cursor.run_query(sql='INSERT INTO ABC.FILE_LOAD_LOG(FILE_CNT) SELECT COUNT(1) FROM '+escaped_table_name+' ; ')
         message = "Completed"
         print(message)
         return message
